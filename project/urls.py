@@ -22,6 +22,7 @@ from pessoas.api import api as pessoas_api
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/', pessoas_api.urls),
+    path('', pessoas_api.urls),
 ]
 
 from django.conf import settings
