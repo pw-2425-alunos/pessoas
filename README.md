@@ -6,6 +6,8 @@
 * ou instale e experimente, fazendo alterações ao projeto
 
 
+
+
 ### Passos de Instalação
 1. Faça clone do repositório, ou crie um codespace
 2. crie um ambiente virtual `python -m venv venv`
@@ -13,6 +15,9 @@
 4. instale os módulos necessários com `pip install -r requirements.txt`
 5. lance a aplicação com `python manage.py runserver`
 6. consulte documentação Swagger em `http://127.0.0.1:8000/pessoas/api/docs`
+
+
+
 
 ### Documentação SWAGGER
 
