@@ -1,7 +1,7 @@
 #  API RESTful Pessoas
 
-* veja os [video-tutoriais Youtube]( https://www.youtube.com/watch?v=bOMVovKGJnM&list=PLq0eqW6lq_BR6l1c7G9OGOwX9fDjrxPR-) que ensinam a criar esta API RESTful em
-* projeto demonstrativo de API RESTful
+* projeto demonstrativo de uma API RESTful em django-ninja
+* * veja os [video-tutoriais Youtube]( https://www.youtube.com/watch?v=bOMVovKGJnM&list=PLq0eqW6lq_BR6l1c7G9OGOwX9fDjrxPR-) que ensinam a criar esta API RESTful
 * explore a API em produção em https://pessoas.pw.deisi.ulusofona.pt/
 * ou instale e experimente, fazendo alterações ao projeto
 
