@@ -1,40 +1,31 @@
-# django-empty
+#  API RESTful Pessoas
 
-Este repositório serve como um template base para projetos Django, permitindo iniciar rapidamente um novo projeto com uma estrutura pré-configurada.
+* veja o [video-tutorial Youtube]( https://www.youtube.com/watch?v=bOMVovKGJnM&list=PLq0eqW6lq_BR6l1c7G9OGOwX9fDjrxPR-) que ensinam a criar esta API RESTful em
+* projeto demonstrativo de API RESTful
+* explore a API em produção em https://pessoas.pw.deisi.ulusofona.pt/
 
-## Propósito
 
-O `django-empty` foi criado para ser um ponto de partida para projetos Django. Pode clonar este repositório e importar o seu projeto Django existente, aproveitando a configuração inicial já preparada.
+### Passos de Instalação
 
-## Conteúdo
-
-- **.github/workflows**: Contém os ficheiros de configuração para o pipeline CI/CD, que automatiza o build, push e deploy da imagem Docker.
-- **.gitignore**: Define os ficheiros e pastas a serem ignorados pelo Git, como ficheiros temporários e ambientes virtuais.
-- **Dockerfile**: Ficheiro de configuração para construir a imagem Docker da aplicação Django. Atenção que `project` deve corresponder ao nome da pasta onde está `settings.py`.
-- **docker-compose.yml**: Configuração para orquestrar serviços com Docker Compose, útil para desenvolvimento local.
-- **requirements.txt**: Lista as dependências Python necessárias para o projeto.
-
-## Media/Static Files
-
-Em settings.py:
 ```
-import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'), 
-]
-
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles') 
+python -m venv venv
 ```
+
+```
+./source venv/bin/activate   # linux, Mac
+```
+
+ou
+```
+venv/Script/activate  # Windows
+```
+
+```
+pip install -r requirements.txt
+```
+
+```
+python manage.py runserver
+```
+
+ver documentação Swagger em `http://127.0.0.1:8000/pessoas/api/docs`
