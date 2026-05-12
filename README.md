@@ -1,46 +1,20 @@
-# django-empty
+#  API RESTful Pessoas
 
-Este repositório serve como um template base para projetos Django, permitindo iniciar rapidamente um novo projeto com uma estrutura pré-configurada.
+* projeto demonstrativo de uma API RESTful em django-ninja
+* * veja os [video-tutoriais Youtube]( https://www.youtube.com/watch?v=bOMVovKGJnM&list=PLq0eqW6lq_BR6l1c7G9OGOwX9fDjrxPR-) que ensinam a criar esta API RESTful
+* explore a API em produção em https://pessoas.pw.deisi.ulusofona.pt/
+* ou instale e experimente, fazendo alterações ao projeto
 
-## Propósito
 
-O `django-empty` foi criado para ser um ponto de partida para projetos Django. Pode clonar este repositório e importar o seu projeto Django existente, aproveitando a configuração inicial já preparada.
+### Passos de Instalação
+1. Faça clone do repositório, ou crie um codespace
+2. crie um ambiente virtual `python -m venv venv`
+3. ativação do ambiente virtual com `./source venv/bin/activate` para linux, Mac, ou `venv/Script/activate` para Windows
+4. instale os módulos necessários com `pip install -r requirements.txt`
+5. lance a aplicação com `python manage.py runserver`
+6. consulte documentação Swagger em `http://127.0.0.1:8000/pessoas/api/docs`
 
-## Conteúdo
 
-- **.github/workflows**: Contém os ficheiros de configuração para o pipeline CI/CD, que automatiza o build, push e deploy da imagem Docker.
-- **.gitignore**: Define os ficheiros e pastas a serem ignorados pelo Git, como ficheiros temporários e ambientes virtuais.
-- **Dockerfile**: Ficheiro de configuração para construir a imagem Docker da aplicação Django. Atenção que `project` deve corresponder ao nome da pasta onde está `settings.py`.
-- **docker-compose.yml**: Configuração para orquestrar serviços com Docker Compose, útil para desenvolvimento local.
-- **requirements.txt**: Lista as dependências Python necessárias para o projeto.
+### Documentação SWAGGER
 
-## Media/Static Files
-
-Adicione WhiteNoise no MIDDLEWARE antes do CommonMiddleware:
-
-```
-"whitenoise.middleware.WhiteNoiseMiddleware",
-```
-
-Em settings.py:
-```
-import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'), 
-]
-
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles') 
-```
+<img width="1864" height="1530" alt="swagger" src="https://github.com/user-attachments/assets/9cd243bf-d0d0-46ba-bda6-9ab3b8a09f5a" />
